@@ -1,0 +1,538 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+
+body{
+    background:#f4f6fb;
+    color:#222;
+    transition:0.3s;
+}
+
+
+/* Navbar */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+.logo{
+
+    font-size:24px;
+    font-weight:bold;
+
+}
+
+
+.nav-right{
+
+    display:flex;
+    gap:15px;
+    align-items:center;
+
+}
+
+
+
+/* Container */
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+
+}
+
+
+/* Cards */
+
+.summary-cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+
+}
+
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom:25px;
+    transition:0.3s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.card h1{
+
+    color:#4f46e5;
+
+}
+
+
+
+/* Inputs */
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ddd;
+
+}
+
+
+
+button{
+
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+
+
+form button{
+
+    background:#4f46e5;
+    color:white;
+
+}
+
+
+
+.delete{
+
+    background:#ef4444;
+    color:white;
+
+}
+
+
+.theme-btn{
+
+    background:#111827;
+    color:white;
+
+}
+
+
+
+
+/* Expenses */
+
+.expense-card{
+
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+.category-badge{
+
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:20px;
+    margin-top:8px;
+    font-size:14px;
+    background:#ddd;
+
+}
+
+
+.food{
+    background:#fde68a;
+}
+
+.travel{
+    background:#bfdbfe;
+}
+
+.shopping{
+    background:#fbcfe8;
+}
+
+.bills{
+    background:#ddd6fe;
+}
+
+.health{
+    background:#bbf7d0;
+}
+
+.education{
+    background:#fed7aa;
+}
+
+.entertainment{
+    background:#fecaca;
+}
+
+
+
+/* Dark Mode */
+
+.dark{
+
+    background:#111827;
+    color:white;
+
+}
+
+
+.dark .card,
+.dark .expense-card,
+.dark .navbar{
+
+    background:#1f2937;
+    color:white;
+
+}
+
+
+
+.dark input{
+
+    background:#374151;
+    color:white;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.navbar{
+
+    flex-direction:column;
+    gap:15px;
+
+}
+
+
+.expense-card{
+
+    flex-direction:column;
+    gap:15px;
+
+}
+
+}
+/* Smooth page animation */
+
+body{
+    animation: pageLoad 0.5s ease;
+}
+
+
+@keyframes pageLoad{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+/* Card animation */
+
+.card{
+
+    animation: cardIn 0.6s ease;
+}
+
+
+@keyframes cardIn{
+
+    from{
+        opacity:0;
+        transform:scale(0.95);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+
+/* Expense hover */
+
+.expense-card{
+
+    transition:0.3s ease;
+
+}
+
+
+.expense-card:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.18);
+
+}
+
+
+
+/* Buttons */
+
+button{
+
+    transition:0.25s ease;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Add button glow */
+
+form button:hover{
+
+    box-shadow:
+    0 0 20px #4f46e5;
+
+}
+
+
+
+/* Badge animation */
+
+.category-badge{
+
+    animation: badgePop 0.4s ease;
+
+}
+
+
+@keyframes badgePop{
+
+    from{
+        transform:scale(0);
+    }
+
+    to{
+        transform:scale(1);
+    }
+
+}
+
+
+
+/* Chart card */
+
+.chart-card{
+
+    animation-delay:0.2s;
+
+}
+
+
+
+/* Navbar */
+
+.navbar{
+
+    animation: slideDown 0.5s ease;
+
+}
+
+
+@keyframes slideDown{
+
+    from{
+        transform:translateY(-50px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+}
+/* Floating background effect */
+
+.container{
+    animation: floatIn 0.8s ease;
+}
+
+
+@keyframes floatIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+/* Summary cards stagger */
+
+.summary-cards .card:nth-child(1){
+    animation-delay:0.1s;
+}
+
+.summary-cards .card:nth-child(2){
+    animation-delay:0.2s;
+}
+
+.summary-cards .card:nth-child(3){
+    animation-delay:0.3s;
+}
+
+
+
+/* Pulse total amount */
+
+.card h1{
+
+    animation: pulse 2s infinite;
+
+}
+
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+
+
+/* Delete button shake */
+
+.delete:hover{
+
+    animation: shake 0.3s;
+
+}
+
+
+@keyframes shake{
+
+    0%{transform:translateX(0)}
+
+    25%{transform:translateX(-3px)}
+
+    50%{transform:translateX(3px)}
+
+    75%{transform:translateX(-3px)}
+
+    100%{transform:translateX(0)}
+
+}
+
+
+
+/* Input focus animation */
+
+input:focus{
+
+    outline:none;
+
+    border-color:#4f46e5;
+
+    box-shadow:0 0 15px rgba(79,70,229,0.4);
+
+    transform:scale(1.02);
+
+}
+
+
+
+/* Navbar logo animation */
+
+.logo{
+
+    animation: logoMove 1s ease;
+
+}
+
+
+@keyframes logoMove{
+
+    from{
+        letter-spacing:10px;
+        opacity:0;
+    }
+
+    to{
+        letter-spacing:0;
+        opacity:1;
+    }
+
+}
